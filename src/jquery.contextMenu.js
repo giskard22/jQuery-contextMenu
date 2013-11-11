@@ -131,7 +131,7 @@ var // currently active contextMenu trigger
                 height = opt.$menu.height(),
                 width = opt.$menu.width();
             
-            if (offset.top + height > bottom) {
+            if (offset.top + height > bottom && height < offset.top - $win.scrollTop()) {
                 offset.top -= height;
             }
             
